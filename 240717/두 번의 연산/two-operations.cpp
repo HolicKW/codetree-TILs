@@ -8,6 +8,12 @@ int main() {
     if(a % 2 == 1){
         a +=3;
     }
-    cout <<a/3;
+
+    if(a%3 == 0){
+        cout << a/3;
+    }
+    else{
+        cout << a;
+    }
     return 0;
 }
