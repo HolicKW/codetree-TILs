@@ -6,9 +6,10 @@ int main() {
     int a,b;
     cin >> a >> b;
     for(int j = 2; j<=8; j+=2){
+        int cnt = 0;
         for(int i = b; i>=a; i--){
-            
-            if(i == 2){
+            cnt++;
+            if(cnt == (b-a)+1){
                 cout << i << " * " <<  j << " = " << i*j;
             }
             else{
