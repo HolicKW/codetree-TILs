@@ -10,10 +10,10 @@ int main() {
     while(1){
         i++;
         n/= i;
-        count++;
         if(n/i ==0){
             break;
         }
+        count++;
     }
     cout <<count;
     return 0;
