@@ -10,7 +10,7 @@ int main() {
     cin >> n;
     if (str.length()>=n){
         for(int i = str.length()-1; i>0;i--){
-            if(cnt == n){
+            if(cnt >= n){
                 break;
             }
             cout << str[i];
