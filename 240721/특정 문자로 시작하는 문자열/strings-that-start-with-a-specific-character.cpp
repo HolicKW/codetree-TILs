@@ -14,13 +14,11 @@ int main() {
     cin >> a;
 
     for(int i = 0; i<n;i++){
-        for(int j = 0; j<str[i].length(); j++){
-            if(str[i][j] == a){
-                result += str[i].length();
-                cnt++;
-                break;
-            }
+         if(str[i][0] == a){
+            result += str[i].length();
+            cnt++;
         }
+        
     }
 
     cout << cnt << ' ';
