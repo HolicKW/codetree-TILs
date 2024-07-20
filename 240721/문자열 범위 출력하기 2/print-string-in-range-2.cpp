@@ -8,8 +8,8 @@ int main() {
     int n,cnt(0);
     cin >> str;
     cin >> n;
-    if (n<=str.length()){
-        for(int i = str.length()-1; i>=0;i--){
+    if (str.length()>=n){
+        for(int i = str.length()-1; i>0;i--){
             if(cnt == n){
                 break;
             }
