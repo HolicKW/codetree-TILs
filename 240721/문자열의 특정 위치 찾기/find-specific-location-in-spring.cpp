@@ -15,7 +15,7 @@ int main() {
         }
         cnt++;
 
-        if(i == str.length() && str[i] != a){
+        if(i == str.length()-1 && str[i] != a){
             cout << "No";
         }
     }
