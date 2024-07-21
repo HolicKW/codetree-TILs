@@ -18,6 +18,9 @@ int main() {
     if(cnt == 0){
         cout << "-1";
     }
+    else if(str1 == str2){
+        cout << "0";
+    }
     else{
         cout << cnt;
     }
