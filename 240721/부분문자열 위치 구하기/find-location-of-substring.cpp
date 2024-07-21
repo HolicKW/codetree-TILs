@@ -10,7 +10,7 @@ int main() {
     cin >> str2;
     int cnt(0);
     for(int i = 0; i<str1.length(); i++){
-        if(str1.substr(i,str2.length()) == str2){
+        if(str1.substr(i,str2.length()-1) == str2){
             cnt = i;
             break;
         }
