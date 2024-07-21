@@ -10,16 +10,15 @@ int main() {
     cin >> str2;
     int cnt(0);
     for(int i = 0; i<str1.length(); i++){
-        if(str1.substr(i,str2.length()) == str2 ){
-            cnt++;
+        if(str1.substr(i,str2.length()) == str2){
+            cnt = i;
+            break;
         }
+
     }
 
     if(cnt == 0){
         cout << "-1";
-    }
-    else if(str1 == str2){
-        cout << "0";
     }
     else{
         cout << cnt;
