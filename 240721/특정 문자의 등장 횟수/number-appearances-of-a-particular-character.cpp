@@ -13,8 +13,10 @@ int main() {
         }
     }
     
-    if(str.find("eb") != string::npos){
-        cnt2++;
+    for(int i = 1; i<str.length();i++){
+        if(str[i-1] == 'e' && str[i] == 'b'){
+            cnt2++;
+        }
     }
     cout <<cnt1<<' '<<cnt2;
     return 0;
