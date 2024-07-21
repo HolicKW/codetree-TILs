@@ -3,25 +3,26 @@
 using namespace std;
 
 int main() {
-    // 여기에 코드를 작성해주세요.
-    string str1;
-    string str2;
-    cin >> str1;
-    cin >> str2;
-    int cnt(0);
-    for(int i = 0; i<str1.length(); i++){
-        if(str1.substr(i,str2.length()-1) == str2){
-            cnt = i;
-            break;
-        }
+    string inputStr, targetStr;
+    cin >> inputStr >> targetStr;
 
+    int inputLen = inputStr.length();
+    int targetLen = targetStr.length();
+    int count = 0;
+
+    // 입력 문자열에서 목적 문자열의 발생 횟수를 계산
+    for (int i = 0; i <= inputLen - targetLen; i++) {
+        if (inputStr.substr(i, targetLen) == targetStr) {
+            count++;
+        }
     }
 
-    if(cnt == 0){
-        cout << "-1";
+    // 결과 출력
+    if(count !=0){
+    cout << count << endl;
     }
     else{
-        cout << cnt;
+        cout << "-1";
     }
 
     return 0;
