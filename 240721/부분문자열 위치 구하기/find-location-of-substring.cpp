@@ -8,7 +8,7 @@ int main() {
 
     int inputLen = inputStr.length();
     int targetLen = targetStr.length();
-    int count = 0;
+    int count = -1;
 
     // 입력 문자열에서 목적 문자열의 발생 횟수를 계산
     for (int i = 0; i <= inputLen - targetLen; i++) {
@@ -18,11 +18,11 @@ int main() {
     }
 
     // 결과 출력
-    if(count !=0){
+    if(count != -1){
     cout << count << endl;
     }
     else{
-        cout << "-1";
+        cout << count;
     }
 
     return 0;
