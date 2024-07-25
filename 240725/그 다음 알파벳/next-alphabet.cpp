@@ -6,6 +6,9 @@ int main() {
     char ch;
     cin >> ch;
     ch++;
+    if(ch > 'z'){
+        ch = 'a';
+    }
     cout <<ch;
     return 0;
 }
