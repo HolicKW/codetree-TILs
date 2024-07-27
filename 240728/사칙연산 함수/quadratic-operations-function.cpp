@@ -30,6 +30,10 @@ int main() {
     else if(sign == '*'){
         result = mul(a,b);
     }
+    else{
+        cout << "false";
+        return 0;
+    }
 
     cout << a << ' ' << sign << ' ' << b << " = " << result;
     return 0;
