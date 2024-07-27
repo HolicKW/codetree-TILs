@@ -31,7 +31,7 @@ int main() {
         result = mul(a,b);
     }
     else{
-        cout << "false";
+        cout << "False";
         return 0;
     }
 
