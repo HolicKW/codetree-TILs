@@ -13,7 +13,7 @@ int main() {
         cout<<"Yes";
     }
     else{
-        cout << "NO";
+        cout << "No";
     }
     
     return 0;
