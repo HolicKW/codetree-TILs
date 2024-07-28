@@ -20,7 +20,7 @@ int main() {
     cin >> y >> m >> d;
 
     int M[12] ={31,28,31,30,31,30,31,31,30,31,30,31};
-    if(istrue){
+    if(istrue(y)){
         M[1] = 29;
     }
 
@@ -28,7 +28,7 @@ int main() {
         cout << "-1";
         return 0;
     }
-    
+
     if(m>=3 && m<=5){
         cout <<"Spring";
     }
