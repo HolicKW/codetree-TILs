@@ -24,7 +24,7 @@ int main() {
         M[1] = 29;
     }
 
-    if(M[m] < d){
+    if(M[m-1] < d){
         cout << "-1";
         return 0;
     }
