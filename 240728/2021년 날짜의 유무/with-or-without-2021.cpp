@@ -13,5 +13,8 @@ int main() {
     if(M[m]>=d){
         cout << "Yes";
     }
+    else{
+        cout << "No";
+    }
     return 0;
 }
