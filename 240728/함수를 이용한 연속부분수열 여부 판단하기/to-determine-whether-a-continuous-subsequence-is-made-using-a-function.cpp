@@ -3,7 +3,7 @@
 using namespace std;
 
 bool cmp(int * arr1,int*arr2,int len1,int len2){
-    for(int i = 0; i < len1-len2; i++){
+    for(int i = 0; i <= len1-len2; i++){
         bool match = true;
         for(int j = 0; j<len2; j++){
             if(arr1[i+j] != arr2[j]){
