@@ -18,14 +18,14 @@ int main() {
     int arr1[n];
     int arr2[n];
     for(int i = 0; i<n;i++){
-        cin >> arr1[n];
+        cin >> arr1[i];
     }
     for(int i = 0; i<n;i++){
-        cin >> arr2[n];
+        cin >> arr2[i];
     }
     sort(arr1,arr1+n);
     sort(arr2,arr2+n);
-    if(cmp){
+    if(cmp(arr1,arr2,n)){
         cout <<"Yes";
     }
     else{
