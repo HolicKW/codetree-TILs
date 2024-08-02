@@ -19,14 +19,14 @@ int main() {
     int n;
     cin >> n;
     dat data[n];
-    string rainy;
-    int cnt;
+    string rainy="9999-12-31";
+    int cnt(0);
     for(int i = 0; i<n;i++){
         cin >> data[i].date >> data[i].weeks >> data[i].weather;
 
         if(data[i].weather == "Rain"){
-            if(rainy<data[i].date){
-                rainy = data[i].weather;
+            if(data[i].date < rainy){
+                rainy = data[i].date;
                 cnt = i;
             }
         }
