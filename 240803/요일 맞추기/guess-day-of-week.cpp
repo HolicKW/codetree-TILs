@@ -19,9 +19,11 @@ int main() {
     cin >> m1 >> d1 >> m2 >> d2;
     int a = su(m1,d1);
     int b = su(m2,d2);
-    int result = (b-a+365)%7;
-    string week[7] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
-    int month[13] ={0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    cout << week[result];
+    int result = b-a;
+    if(result < 0){
+        result += 7;
+    }
+    string week[7] = {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
+    cout << week[result%7];
     return 0;
 }
