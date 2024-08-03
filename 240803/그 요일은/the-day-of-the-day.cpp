@@ -31,13 +31,10 @@ int main() {
             break;
         }
     }
-    if(index>0){
-        result -= index;
-        cnt++;
-    }
-    while(result >= 7){
-        result -= 7;
-        cnt++;
+    for (int i = 0; i <= result; i++) {
+        if (week[(index + i) % 7] == start) {
+            cnt++;
+        }
     }
 
     cout << cnt;
