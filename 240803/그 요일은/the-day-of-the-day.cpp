@@ -31,8 +31,10 @@ int main() {
             break;
         }
     }
-    result -= index;
-    cnt++;
+    if(index>0){
+        result -= index;
+        cnt++;
+    }
     while(result >= 7){
         result -= 7;
         cnt++;
