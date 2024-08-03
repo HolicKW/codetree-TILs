@@ -20,8 +20,8 @@ int main() {
     int a = su(m1,d1);
     int b = su(m2,d2);
     int result = b-a;
-    if(result < 0){
-        result += 7;
+    while(result <0){
+        result +=7;
     }
     string week[7] = {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
     cout << week[result%7];
