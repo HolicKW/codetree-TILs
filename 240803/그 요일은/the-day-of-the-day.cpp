@@ -22,6 +22,10 @@ int main() {
     int a = su(m1,d1);
     int b = su(m2,d2);
     int result = b-a;
+    if(result <7){
+        cout << "0";
+        return 0;
+    }
     int cnt = 0;
     int index=0;
     string week[7] = {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
@@ -31,10 +35,13 @@ int main() {
             break;
         }
     }
-    for (int i = 0; i <= result; i++) {
-        if (week[(index + i) % 7] == start) {
-            cnt++;
-        }
+    if(index>0){
+        result -= index;
+        cnt++;
+    }
+    while(result >= 7){
+        result -= 7;
+        cnt++;
     }
 
     cout << cnt;
