@@ -33,7 +33,7 @@ int main() {
                     continue;
                 }
                 else{
-                    if(tiles[loc].cnt1 == 2 && tiles[loc].cnt2 == 2){
+                    if(tiles[loc].cnt1 >= 2 && tiles[loc].cnt2 >= 2){
                         tiles[loc].color = 'G';
                     }
                     else
@@ -53,7 +53,7 @@ int main() {
                     continue;
                 }
                 else{
-                    if(tiles[loc].cnt1 == 2 && tiles[loc].cnt2 == 2){
+                    if(tiles[loc].cnt1 >= 2 && tiles[loc].cnt2 >= 2){
                         tiles[loc].color = 'G';
                     }
                     else
