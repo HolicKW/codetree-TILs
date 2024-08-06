@@ -33,8 +33,8 @@ public:
 int main() {
     int n;
     cin >> n;
-    Tile tiles[2000]; // 충분히 큰 배열 할당
-    int loc = 1000; // 초기 위치는 배열의 중앙
+    Tile tiles[20000]; // 충분히 큰 배열 할당
+    int loc = 10000; // 초기 위치는 배열의 중앙
 
     for (int i = 0; i < n; i++) {
         int a;
@@ -57,7 +57,7 @@ int main() {
     int black_count = 0;
     int gray_count = 0;
 
-    for (int i = 0; i < 2000; i++) {
+    for (int i = 0; i < 20000; i++) {
         if (tiles[i].color == 'W') {
             white_count++;
         } else if (tiles[i].color == 'B') {
