@@ -17,8 +17,8 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n;
     cin >> n;
-    tile tiles[2000];
-    int loc = 1000;
+    tile tiles[20000];
+    int loc = 10000;
     int bl = 0;
     int wh = 0;
     int gr = 0;
@@ -65,7 +65,7 @@ int main() {
             }
         }
     }
-    for(int i = 0; i<2000; i++){
+    for(int i = 0; i<20000; i++){
         if(tiles[i].color == 'W'){
             wh++;
         }
