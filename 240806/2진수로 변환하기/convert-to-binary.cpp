@@ -17,7 +17,7 @@ int main() {
         n/=2;
     }
     for(int i = cnt - 1; i >= 0; i--)
-        cout << digits[i];
+        cout << digit[i];
 
     return 0;
 }
