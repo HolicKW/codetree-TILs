@@ -13,13 +13,13 @@ int main() {
         char b;
         cin >> a >> b;
         if(b == 'L'){
-            for(int i = 0; i<a; i++){
+            for(int j = 0; j<a; j++){
                 arr[loc]++;
                 loc--;
             }
         }
         else{
-            for(int i =0; i<a; i++){
+            for(int j =0; j<a; j++){
                 arr[loc]++;
                 loc++;
             }
