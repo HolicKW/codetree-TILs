@@ -7,7 +7,10 @@ int main() {
     cin >> n;
     int digit[30];
     int cnt(0);
-
+    if(n == 0){
+        cout << "0";
+        return 0;
+    }
     while(1){
         if(n<2){
             digit[cnt] = 1;
