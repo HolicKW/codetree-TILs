@@ -19,7 +19,7 @@ int main() {
         digit[cnt++] = n%2;
         n/=2;
     }
-    for(int i = cnt - 1; i >= 0; i--)
+    for(int i = cnt; i >= 0; i--)
         cout << digit[i];
 
     return 0;
