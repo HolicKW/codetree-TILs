@@ -30,7 +30,7 @@ int main() {
             for(int j = 0; j<a; j++){
                 tiles[loc].cnt1++;
                 if(tiles[loc].color == 'G'){
-                    break;
+                    continue;
                 }
                 else{
                     if(tiles[loc].cnt1 == 2 && tiles[loc].cnt2 == 2){
@@ -50,7 +50,7 @@ int main() {
              for(int j = 0; j<a; j++){
                 tiles[loc].cnt2++;
                 if(tiles[loc].color == 'G'){
-                    break;
+                    continue;
                 }
                 else{
                     if(tiles[loc].cnt1 == 2 && tiles[loc].cnt2 == 2){
