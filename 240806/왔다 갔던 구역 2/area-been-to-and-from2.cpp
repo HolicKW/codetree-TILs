@@ -15,13 +15,21 @@ int main() {
         if(b == 'L'){
             for(int j = 0; j<a; j++){
                 arr[loc]++;
-                loc--;
+                if(j == a-1){
+                    continue;
+                }
+                else
+                    loc--;
             }
         }
         else{
             for(int j =0; j<a; j++){
                 arr[loc]++;
-                loc++;
+                if(j == a-1){
+                    continue;
+                }
+                else
+                    loc++;
             }
         }
     }
