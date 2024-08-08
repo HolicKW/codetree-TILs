@@ -12,7 +12,7 @@ int main() {
 
     int max=1;
     int cnt(1);
-    for(int i = 0; i<n; i++){
+    for(int i = 0; i<n-1; i++){
         if(((arr[i]>0) && (arr[i+1]>0)) || ((arr[i] < 0) && (arr[i+1]<0))){
             cnt++;
         }
