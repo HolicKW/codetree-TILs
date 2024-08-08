@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // 여기에 코드를 작성해주세요.
+    int n;
+    cin >> n;
+    int arr[n];
+
+    for(int i = 0; i<n; i++){
+        cin >> arr[i];
+    }
+
+    int cnt(1);
+    int max(1);
+    for(int i = 0; i<n-1; i++){
+        if(arr[i+1]>arr[i]){
+            cnt++;
+        }
+        else{
+            if(cnt>max){
+                max =cnt;
+            }
+            cnt = 1;
+        }
+    }
+
+    if(cnt>max){
+        max =cnt;
+    }
+    cout << max;
+    return 0;
+}
