@@ -16,13 +16,18 @@ int main() {
     for(int i = 0; i<n-1;i++){
         if(arr[i] == arr[i+1]){
             cnt++;
+            if(max < cnt){
+                max =cnt;
+            }
         }
-        else{
-            if(cnt> max){
+    
+        if(arr[i] != arr[i+1]){
+            if(cnt>max){
                 max = cnt;
                 cnt = 1;
             }
         }
+    
     }
 
     cout << max;
