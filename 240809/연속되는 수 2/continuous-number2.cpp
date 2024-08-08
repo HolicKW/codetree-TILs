@@ -20,8 +20,7 @@ int main() {
                 max =cnt;
             }
         }
-    
-        if(arr[i] != arr[i+1]){
+        else if(arr[i] != arr[i+1]){
             if(cnt>max){
                 max = cnt;
                 cnt = 1;
