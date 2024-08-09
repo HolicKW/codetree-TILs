@@ -10,18 +10,20 @@ int main() {
     for(int i = 0; i<m; i++){
         cin >> a;
         arr[a]++;
+        if(arr[a] >= k){
+            cout << a;
+            return 0;
+        }
         //cout << arr[a] << endl;
     }
 
     for(int i = 1; i<=n; i++){
-        if(arr[i] >= k){
-            cout << i;
-            break;
-        }
-        else if(i == n && arr[i] <=k){
+        if(i == n && arr[i] <=k){
             cout << -1;
         }
     }
 
+
+ 
     return 0;
 }
