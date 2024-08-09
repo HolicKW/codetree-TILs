@@ -4,9 +4,15 @@ using namespace std;
 
 int cmp(int a[], int b[], int len){
     int cnt(0);
-    for(int i = 1; i<len-1; i++){
+    bool first = false;
+    for(int i = 0; i<len-1; i++){
         if((a[i]>=b[i] && a[i+1] < b[i+1]) || (a[i]<=b[i] && a[i+1] > b[i+1])){
-            cnt++;
+            if(!first){
+                first = true;
+            }
+            else{
+                cnt++;
+            }
         }
     }
     return cnt;
