@@ -58,8 +58,8 @@ int main() {
         }
 
     }
-
-    for(int i = 1; i<1000000; i++){
+    int max = count_a > count_b ? count_a : count_b;
+    for(int i = 1; i<=max; i++){
         if(a[i] == b[i]){
             result = i;
             break;
