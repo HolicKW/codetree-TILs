@@ -59,7 +59,7 @@ int main() {
 
     }
     int max = count_a > count_b ? count_a : count_b;
-    for(int i = 1; i<=max; i++){
+    for(int i = 1; i<max; i++){
         if(a[i] == b[i]){
             result = i;
             break;
