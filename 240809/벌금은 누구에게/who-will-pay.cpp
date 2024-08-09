@@ -6,19 +6,19 @@ int main() {
     int n,m,k;
     cin >> n >> m >>k;
     int arr[n] = {0,};
-    for(int i = 0; i<m; i++){
+    for(int i = 1; i<=m; i++){
         int a;
         cin >> a;
         arr[a]++;
     
     }
 
-    for(int i = 0; i<n; i++){
+    for(int i = 1; i<=n; i++){
         if(arr[i] >= k){
             cout << i;
             break;
         }
-        else if(i == n-1 && arr[i] <=k){
+        else if(i == n && arr[i] <=k){
             cout << -1;
         }
     }
