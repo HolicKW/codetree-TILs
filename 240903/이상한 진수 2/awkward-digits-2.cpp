@@ -8,7 +8,7 @@ int main() {
     cin >> s;
     bool check = false;
     for(int i = 0; i<s.length(); i++){
-        if(s.length() == 1 && s == '1'){
+        if(s.length() == 1 && s[0] == '1'){
             cout << 0;
         }
         if(!check){
