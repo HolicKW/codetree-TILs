@@ -8,10 +8,6 @@ int main() {
     cin >> s;
     bool check = false;
     for(int i = 0; i<s.length(); i++){
-        if(s.length() == 1 && s[0] == '1'){
-            cout << 0;
-            return 0;
-        }
         if(!check && s[i] == '0'){
             s[i] = '0' + '1' - s[i];
             check = true;
