@@ -12,11 +12,9 @@ int main() {
             cout << 0;
             return 0;
         }
-        if(!check){
-            if(s[i] == '0'){
-                s[i] = '0' + '1' - s[i];
-                check = true;
-            }
+        if(!check && s[i] == '0'){
+            s[i] = '0' + '1' - s[i];
+            check = true;
         }
         else if(!check && i == s.length()-1){
             for(int i = s.length()-1; i>=0;i--){
