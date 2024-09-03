@@ -10,6 +10,7 @@ int main() {
     for(int i = 0; i<s.length(); i++){
         if(s.length() == 1 && s[0] == '1'){
             cout << 0;
+            return 0;
         }
         if(!check){
             if(s[i] == '0'){
