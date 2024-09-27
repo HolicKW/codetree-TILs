@@ -34,8 +34,8 @@ int main() {
         result = max(result,cnt);
     }
     else{
-        for(int i = 0; i<n-3; i++){
-            for(int j = 0; j<n-3; j++){
+        for(int i = 0; i<n-2; i++){
+            for(int j = 0; j<n-2; j++){
                 cnt = getCoin(i,j,arr);
                 result = max(result,cnt);
             }
