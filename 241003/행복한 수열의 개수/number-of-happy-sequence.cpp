@@ -13,13 +13,18 @@ int check1(int check[][101], int n, int m) {
                 consecutiveCount = 1;  // 초기화
             }
 
+            // 연속된 수가 m 이상일 경우
             if (consecutiveCount >= m) {
                 cnt++;
                 break;  // 행에서 더 이상 검사하지 않음
             }
         }
+        // 예외처리: n이 1일 경우
+        if (n == 1 && m == 1) {
+            cnt++;  // 단일 값에 대해 카운트 증가
+        }
     }
-    return cnt;
+    return cnt;  // 카운트 반환
 }
 
 // 세로 방향 체크 함수
@@ -34,13 +39,18 @@ int check2(int check[][101], int n, int m) {
                 consecutiveCount = 1;  // 초기화
             }
 
+            // 연속된 수가 m 이상일 경우
             if (consecutiveCount >= m) {
                 cnt++;
                 break;  // 열에서 더 이상 검사하지 않음
             }
         }
+        // 예외처리: n이 1일 경우
+        if (n == 1 && m == 1) {
+            cnt++;  // 단일 값에 대해 카운트 증가
+        }
     }
-    return cnt;
+    return cnt;  // 카운트 반환
 }
 
 int main() {
