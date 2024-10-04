@@ -4,8 +4,8 @@
 using namespace std;
 
 
-vector<vector<int>> vec(1000);
-bool visited[1000] = {false,};
+vector<vector<int>> vec(1001);
+bool visited[1001] = {false,};
 int count = 0;
 void dfs(int x){
     visited[x] = true;
