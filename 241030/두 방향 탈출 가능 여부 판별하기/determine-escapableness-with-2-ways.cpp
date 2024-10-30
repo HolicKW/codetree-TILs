@@ -3,7 +3,7 @@ using namespace std;
 int n,m;
 #define MAX 100
 int arr[MAX][MAX];
-bool visited[MAX][MAX] = {1,};
+bool visited[MAX][MAX] = {0,};
 
 bool inRange(int x, int y){
     return x >=0 && x<n && y>=0 && y<n;
