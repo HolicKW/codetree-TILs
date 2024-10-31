@@ -69,7 +69,7 @@ int main() {
 
         if(count >= max_count){
             max_count = count;
-            if(max_k != k){
+            if(max_k < k){
                 max_k = k;
             }
         }
