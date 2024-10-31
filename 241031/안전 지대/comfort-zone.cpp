@@ -75,7 +75,7 @@ int main() {
         }
 
     }
-    cout << max_count << " " << max_k;
+    cout << max_k << " " << max_count;
 
 
     return 0;
