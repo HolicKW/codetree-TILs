@@ -67,11 +67,9 @@ int main() {
             }
         }
 
-        if(count >= max_count){
+        if (count > max_count || (count == max_count && k < max_k)) {
             max_count = count;
-            if(max_k < k){
-                max_k = k;
-            }
+            max_k = k;
         }
 
     }
