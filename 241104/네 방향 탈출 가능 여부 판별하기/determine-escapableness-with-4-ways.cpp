@@ -36,7 +36,6 @@ void bfs(int x, int y){
             int nx = x + dx[i];
             int ny = y + dy[i];
             if(canGo(nx,ny)){
-                arr[nx][ny] = 1;
                 visited[nx][ny] = true;
                 q.push(make_pair(nx,ny));
             }
