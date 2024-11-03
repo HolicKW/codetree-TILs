@@ -23,8 +23,8 @@ bool canGo(int x, int y){
 }
 
 void bfs(int x, int y){
-    int dx[2] = {1,0};
-    int dy[2] = {0,1};
+    int dx[4] = {-1, 1, 0, 0};
+    int dy[4] = {0, 0, -1, 1};
     
     while(!q.empty()){
         pair<int, int> curr = q.front();
@@ -32,7 +32,7 @@ void bfs(int x, int y){
 
         int x = curr.first;
         int y = curr.second;
-        for(int i = 0; i<2;i++){
+        for(int i = 0; i<4;i++){
             int nx = x + dx[i];
             int ny = y + dy[i];
             if(canGo(nx,ny)){
@@ -56,6 +56,6 @@ int main() {
     visited[0][0] = true;
     bfs(0,0);
     
-    cout << arr[n-1][m-1];
+    cout << visited[n-1][m-1];
     return 0;
 }
