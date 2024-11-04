@@ -1,23 +1,32 @@
 #include <iostream>
+
+#define MAX_N 1000
+#define MOD 1000000007
+
 using namespace std;
 
+// 변수 선언
+int n;
+
+long long dp[MAX_N + 1];
+
 int main() {
-    int n;
-    cin >> n; // 입력받은 n
+    // 입력:
+    cin >> n;
 
-    // dp 배열 초기화
-    int dp[1001] = {0};
-    dp[0] = 1; //
-    dp[1] = 2; // 
-    dp[2] = 7; // 
+    // 초기 조건 설정
+    dp[0] = 1;
+    dp[1] = 2;
 
-    // dp 배열을 채워나갑니다.
-    for (int i = 3; i <= n; i++) {
-        dp[i] = (dp[i - 1] *2 +  dp[i - 2]*3) % 1000000007;
+    // 점화식에 따라 dp값 채우기
+    // dp[i] = dp[i - 1] * 2 + dp[i - 2] * 3 +
+    //         (dp[i - 3] + dp[i - 4] + dp[i - 5] + ... dp[0]) * 2
+    for(int i = 2; i <= n; i++) {
+        dp[i] = (dp[i - 1] * 2 + dp[i - 2] * 3) % MOD;
+        for(int j = i - 3; j >= 0; j--)
+            dp[i] = (dp[i] + dp[j] * 2) % MOD;
     }
-
-    // 결과 출력
-    cout << dp[n] << endl;
-
+    
+    cout << dp[n];
     return 0;
 }
