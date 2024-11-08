@@ -1,75 +1,78 @@
 #include <iostream>
+#include <vector>
 #include <queue>
+#include <tuple>
 using namespace std;
-int n,k;
-int r,c;
-queue <pair<int,int>> q;
-int arr[101][101] = {0,};
-bool visited[101][101] = {false};
-pair<int,int> pos = {-1,-1};
 
-int dx[4] = {-1,1,0,0};
-int dy[4] = {0,0,-1,1};
+int n, k;
+vector<vector<int>> grid;
+int dx[] = {-1, 1, 0, 0}; // 상하좌우 이동
+int dy[] = {0, 0, -1, 1};
 
-bool inRange(int x, int y){
-    return x>=0 && x<n && y>=0 && y<n;
-}
+pair<int, int> findNextBFS(int start_x, int start_y) {
+    int max_value = -1;
+    pair<int, int> best_position = {-1, -1};
 
-bool canGo(int x, int y){
-    if(!inRange(x,y)){
-        return false;
-    }
-    if(visited[x][y]){
-        return false;
-    }
-    return true;
-}
+    queue<pair<int, int>> q;
+    q.push({start_x, start_y});
+    bool visited[100][100] = {false};
+    visited[start_x][start_y] = true;
 
-void bfs(){
-    q.push(pos);
-    while(!q.empty()){
-        pair<int,int> curr = q.front();
+    while (!q.empty()) {
+        int x, y;
+        tie(x, y) = q.front();
         q.pop();
-        int x = curr.first;
-        int y = curr.second;
-        int max_value = 0;
-        visited[x][y] = true;
 
-        for(int i = 0; i<4;i++){
+        for (int i = 0; i < 4; i++) {
             int nx = x + dx[i];
             int ny = y + dy[i];
 
-            if(canGo(nx,ny) && arr[x][y] > arr[nx][ny]){
+            if (nx >= 0 && nx < n && ny >= 0 && ny < n && !visited[nx][ny]) {
                 visited[nx][ny] = true;
-                if(arr[nx][ny] > max_value){
-                    max_value = arr[nx][ny];
-                    pos = {nx, ny};
-                }
-                else if(max_value == arr[nx][ny]){
-                    if(pos.first > nx || (pos.first == nx && pos.second>ny)){
-                        pos = {nx, ny};
+                
+                if (grid[nx][ny] < grid[start_x][start_y]) {
+                    if (grid[nx][ny] > max_value) {
+                        max_value = grid[nx][ny];
+                        best_position = {nx, ny};
+                    } else if (grid[nx][ny] == max_value) {
+                        if (nx < best_position.first || (nx == best_position.first && ny < best_position.second)) {
+                            best_position = {nx, ny};
+                        }
                     }
+                    q.push({nx, ny});
                 }
             }
         }
     }
+
+    return best_position;
 }
 
 int main() {
-    // 여기에 코드를 작성해주세요.
     cin >> n >> k;
-    for(int i = 0; i<n;i++){
-        for(int j = 0; j<n; j++){
-            cin >> arr[i][j];
+    grid.assign(n, vector<int>(n));
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> grid[i][j];
         }
     }
+
+    int r, c;
     cin >> r >> c;
-    q.push(make_pair(r-1,c-1));
-    for(int i = 0; i<k;i++){
-        bfs();
+    r--; c--; // 0 인덱스로 조정
+
+    for (int i = 0; i < k; i++) {
+        pair<int, int> next_position = findNextBFS(r, c);
+
+        if (next_position.first == -1 && next_position.second == -1) {
+            break; // 이동할 위치가 없는 경우
+        }
+
+        r = next_position.first;
+        c = next_position.second;
     }
 
-    cout << pos.first <<' ' << pos.second;
-
+    cout << r + 1 << " " << c + 1 << endl; // 1 인덱스 기준으로 출력
     return 0;
 }
