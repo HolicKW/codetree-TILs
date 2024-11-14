@@ -12,8 +12,7 @@ int findMax(int x, int y){
     int sum = arr[x][y];
     int i = 0;
     int nx = x, ny = y;
-    for (int i = 0; i < 4; ++i) {  // 4개의 대각선 방향을 각각 계산
-
+    for (int i = 0; i < 4; ++i) { 
         while (true) {
             nx += dx[i];
             ny += dy[i];
