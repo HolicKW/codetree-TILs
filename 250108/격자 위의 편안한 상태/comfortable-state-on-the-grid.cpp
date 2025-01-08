@@ -2,7 +2,7 @@
 using namespace std;
 int n,m;
 bool inRange(int x, int y){
-    return x>0 && x<=n && y>0 && y<=m;
+    return x>0 && x<=n && y>0 && y<=n;
 }
 int main() {
     int dx[4] = {1,-1,0,0};
