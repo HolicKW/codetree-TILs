@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int n,m;
+int arr[n][n] = {0};
 bool inRange(int x, int y){
     return x>0 && x<=n && y>0 && y<=n;
 }
@@ -8,7 +9,6 @@ int main() {
     int dx[4] = {1,-1,0,0};
     int dy[4] = {0,0,1,-1};
     cin >> n >> m;
-    int arr[n][n] = {0};
     for(int i = 0; i<m;i++){
         int r,c;
         cin >> r >> c;
