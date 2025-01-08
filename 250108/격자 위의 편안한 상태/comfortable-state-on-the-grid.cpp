@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int n,m;
-int arr[n][n] = {0};
+int arr[101][101] = {0};
 bool inRange(int x, int y){
     return x>0 && x<=n && y>0 && y<=n;
 }
