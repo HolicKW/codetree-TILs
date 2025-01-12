@@ -25,7 +25,7 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         // 현재 선분이 마지막으로 선택한 선분과 겹치지 않을 경우
-        if (vec[i].first >= lastEnd) {
+        if (vec[i].first > lastEnd) {
             result++;               // 선분을 선택
             lastEnd = vec[i].second; // 끝나는 지점을 업데이트
         }
