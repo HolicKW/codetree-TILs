@@ -1,8 +1,8 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-
-int arr[1001][1001] = {0,};
+int offset = 1000;
+int arr[2002][2002] = {0,};
 
 int main() {
     // Please write your code here.
@@ -10,6 +10,10 @@ int main() {
     int a1,b1,a2,b2;
     for(int i = 0; i<2;i++){
         cin >> x1 >>y1 >> x2>> y2;
+        x1 += offset;
+        x2 += offset;
+        y1 += offset;
+        y2 += offset;
         if(i==0){
             a1 = x1;
             b1 = y1;
