@@ -6,8 +6,8 @@ using namespace std;
 int main() {
     // Please write your code here.
     int n,m;
-    int a[50001] = {0};
-    int b[50001] = {0};
+    int a[1000001] = {0};
+    int b[1000001] = {0};
     vector<int> vec;
 
     cin >> n >> m;
