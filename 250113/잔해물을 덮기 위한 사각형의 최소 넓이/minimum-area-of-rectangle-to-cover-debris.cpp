@@ -20,17 +20,17 @@ int main() {
             a2 = x2;
             b2 = y2;
         }
-        for(int j = y1; j<y2; j++){
-           for(int k = x1; k<x2; k++){
+        for(int j = x1; j<x2; j++){
+           for(int k = y1; k<y2; k++){
                 arr[j][k]++;
             }
         }
     }
     int Max_x = 0;
     int Max_y = 0;
-    for(int i = b1; i<b2;i++){
+    for(int i = a1; i<a2;i++){
         int cnt = 0;
-        for(int j = a1; j<a2;j++){
+        for(int j = b1; j<b2;j++){
             if(arr[i][j] == 1){
                 cnt++;
             }
