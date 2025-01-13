@@ -27,26 +27,23 @@ int main() {
         }
     }
     int Max_x = 0;
+    int min_x = 2002;
     int Max_y = 0;
+    int min_y = 2002;
     for(int i = a1; i<a2;i++){
         int cnt = 0;
         for(int j = b1; j<b2;j++){
             if(arr[i][j] == 1){
                 cnt++;
+                Max_x = max(Max_x,i);
+                min_x = min(min_x,i);
+                Max_y = max(Max_y,j);
+                min_y = min(min_y,j);
             }
         }
-        Max_x = max(Max_x,cnt);
     }
 
-    for(int i = a1; i<a2;i++){
-        int cnt = 0;
-        for(int j = b1; j<b2;j++){
-            if(arr[j][i] == 1){
-                cnt++;
-            }
-        }
-        Max_y = max(Max_y,cnt);
-    }
-    cout << Max_x*Max_y;
+
+    cout << (Max_x-min_x+1) * (Max_y-min_y+1);
     return 0;
 }
