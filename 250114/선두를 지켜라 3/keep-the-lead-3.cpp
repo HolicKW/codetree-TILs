@@ -26,8 +26,8 @@ int main() {
         }
     }
 
-    int cnt = 1;
-    for(int i = 1; i<=t1; i++){
+    int cnt = 0;
+    for(int i = 1; i<=idx_a; i++){
         if(a[i] > b[i]){
             glory[i] = 'a';
         }
@@ -39,7 +39,7 @@ int main() {
         }
     }
 
-    for(int i = 2; i<=t1; i++){
+    for(int i = 2; i<=idx_a; i++){
         if(glory[i] != glory[i-1]){
             cnt++;
         }
