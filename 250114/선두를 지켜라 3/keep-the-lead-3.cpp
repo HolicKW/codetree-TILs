@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 int n,m;
-int a[1001] = {0};
-int b[1001] = {0};
+int a[1000001] = {0};
+int b[1000001] = {0};
 char glory[1001];
 int main() {
     // Please write your code here.
