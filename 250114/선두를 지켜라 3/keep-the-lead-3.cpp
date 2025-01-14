@@ -27,7 +27,7 @@ int main() {
     }
 
     int cnt = 0;
-    for(int i = 1; i<=idx_a; i++){
+    for(int i = 1; i<idx_a; i++){
         if(a[i] > b[i]){
             glory[i] = 'a';
         }
