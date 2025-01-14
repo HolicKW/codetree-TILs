@@ -13,6 +13,7 @@ int main() {
     cin >> n >> m;
     char tmp = 'A';
     arr[0][0] = tmp;
+    tmp++;
     int dir = 0;
     int x = 0;
     int y = 0;
@@ -21,14 +22,14 @@ int main() {
         int ny = y+dy[dir];
         if(inRange(nx,ny) && arr[nx][ny] == 0){
             
-            arr[nx][ny] = tmp + 1;
+            arr[nx][ny] = tmp; 
         }
         else{
             dir = (dir+1)%4;
             nx = x+dx[dir];
             ny = y+dy[dir];
             
-            arr[nx][ny] = tmp + 1;
+            arr[nx][ny] = tmp;
         }
         tmp++;
         if(tmp+1>'Z') tmp = 'A';
