@@ -21,18 +21,16 @@ int main() {
         int nx = x+dx[dir];
         int ny = y+dy[dir];
         if(inRange(nx,ny) && arr[nx][ny] == 0){
-            
             arr[nx][ny] = tmp; 
         }
         else{
             dir = (dir+1)%4;
             nx = x+dx[dir];
             ny = y+dy[dir];
-            
             arr[nx][ny] = tmp;
         }
-        tmp++;
         if(tmp+1>'Z') tmp = 'A';
+        tmp++;
         x = nx;
         y = ny;
     }
