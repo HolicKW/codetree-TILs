@@ -30,7 +30,9 @@ int main() {
             arr[nx][ny] = tmp;
         }
         if(tmp+1>'Z') tmp = 'A';
-        tmp++;
+        else{
+            tmp++;
+        }
         x = nx;
         y = ny;
     }
