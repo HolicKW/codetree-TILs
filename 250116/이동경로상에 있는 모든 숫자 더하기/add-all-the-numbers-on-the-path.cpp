@@ -26,7 +26,6 @@ int main() {
 
     for (int i = 0; i < t; i++) {
         
-
         if (s[i] == 'L') {
             dir = (dir + 1) % 4;
         }
@@ -40,14 +39,11 @@ int main() {
                 result += arr[x][y];
                 x = nx;
                 y = ny;
-                if(i == t-1){
-                    result += arr[x][y];
-                }
             }
         }
 
     }
 
-    cout << result;
+    cout << result + arr[x][y];
     return 0;
 }
