@@ -24,12 +24,8 @@ int main() {
         }
     }
 
-    int nx = x + dx[dir];
-    int ny = y + dy[dir];
-
     for (int i = 0; i < t; i++) {
-        nx = x + dx[dir];
-        ny = y + dy[dir];
+        
 
         if (s[i] == 'L') {
             dir = (dir + 1) % 4;
@@ -37,12 +33,16 @@ int main() {
         else if (s[i] == 'R') {
             dir = (dir + 3) % 4;
         }
-        else if (s[i] == 'F' && inRange(nx, ny)) {
-            result += arr[x][y];
-            x = nx;
-            y = ny;
-            if(i == t-1){
+        else if (s[i] == 'F') {
+            int nx = x + dx[dir];
+            int ny = y + dy[dir];
+            if(inRange(nx,ny)){
                 result += arr[x][y];
+                x = nx;
+                y = ny;
+                if(i == t-1){
+                    result += arr[x][y];
+                }
             }
         }
 
