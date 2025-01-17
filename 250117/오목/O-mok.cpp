@@ -99,9 +99,8 @@ int main() {
         cout << p.first+1 << ' ' << p.second+1;
         return 0;
     }
-    else{
-        cout << 0;
-    }
+    
+    cout << 0;
         
     return 0;
 }
