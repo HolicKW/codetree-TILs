@@ -9,7 +9,7 @@ bool inRange(int x, int y){
 }
 bool Win1(){
     for(int i = 0; i<19;i++){
-        for(int j = 0; j<14;j++){
+        for(int j = 0; j<15;j++){
             if(arr[i][j] == 1 && arr[i][j+1] == 1&& arr[i][j+2]== 1 && arr[i][j+3] == 1 && arr[i][j+4] == 1){
                 win = 1;
                 p.first = i;
@@ -27,7 +27,7 @@ bool Win1(){
     return false;
 }
 bool Win2(){
-    for(int i = 0; i<14;i++){
+    for(int i = 0; i<15;i++){
         for(int j = 0; j<19;j++){
             if(arr[i][j] == 1 && arr[i+1][j] == 1&& arr[i+2][j]== 1 && arr[i+3][j] == 1 && arr[i+4][j] == 1){
                 win = 1;
@@ -46,8 +46,8 @@ bool Win2(){
     return false;
 }
 bool Win3(){
-    for(int i = 0; i<14;i++){
-        for(int j = 0; j<14;j++){
+    for(int i = 0; i<15;i++){
+        for(int j = 0; j<15;j++){
             if(arr[i][j] == 1 && arr[i+1][j+1] == 1&& arr[i+2][j+2]== 1 && arr[i+3][j+3] == 1 && arr[i+4][j+4] == 1){
                 win = 1;
                 p.first = i+2;
@@ -66,7 +66,7 @@ bool Win3(){
 }
 
 bool Win4(){
-    for(int i = 0; i<14;i++){
+    for(int i = 0; i<15;i++){
         for(int j = 4; j<19;j++){
             if(arr[i][j] == 1 && arr[i+1][j-1] == 1&& arr[i+2][j-2]== 1 && arr[i+3][j-3] == 1 && arr[i+4][j-4] == 1){
                 win = 1;
