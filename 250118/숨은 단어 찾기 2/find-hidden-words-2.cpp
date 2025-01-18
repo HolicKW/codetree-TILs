@@ -5,7 +5,7 @@ int n,m;
 char arr[51][51];
 int result = 0;
 int dx[8] = {0,1,1,1,0,-1,-1,-1};
-int dy[8] = {1,1,0-1,-1,-1,0,1};
+int dy[8] = {1,1,0,-1,-1,-1,0,1};
 
 bool inRange(int x, int y){
     return x>=0 && x<n && y>=0 && y<m;
