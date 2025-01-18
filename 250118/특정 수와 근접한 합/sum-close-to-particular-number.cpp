@@ -21,8 +21,11 @@ int main() {
                 if(k==i || k==j)continue;
                 cnt += arr[k];
             }
-            if(cnt > 0){
+            if(cnt > s){
                 result = min(result,cnt-s);
+            }
+            else{
+                result = min(result,s-cnt);
             }
         }
     }
