@@ -3,14 +3,14 @@
 using namespace std;
 
 int n,k;
-int arr[101];
+int arr[101] = {0};
 int main() {
     // Please write your code here.
     cin >> n >> k;
     for(int i = 0; i<n ;i++){
         int a1,b1;
         cin >> a1 >> b1;
-        arr[b1] = a1;
+        arr[b1] += a1;
     }
     int result = 0;
     for(int i = 0; i<101;i++){
