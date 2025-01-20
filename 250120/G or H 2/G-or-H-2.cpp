@@ -31,7 +31,7 @@ int main() {
             }
             if((count_G == 0 && count_H>0) || (count_G > 0 && count_H == 0) || (count_G == count_H)){
                 sum = count_G+count_H;
-                if(sum > result){
+                if(sum >= result){
                     if(arr[i]!= 0 && arr[j]!=0){
                         result = sum;
                         x = i;
