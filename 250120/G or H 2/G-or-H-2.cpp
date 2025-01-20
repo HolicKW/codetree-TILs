@@ -4,7 +4,7 @@ using namespace std;
 
 char arr[101];
 int n;
-
+int max_len = 0;
 int main() {
     // Please write your code here.
     cin >> n;
@@ -31,11 +31,12 @@ int main() {
             }
             if((count_G == 0 && count_H>0) || (count_G > 0 && count_H == 0) || (count_G == count_H)){
                 sum = count_G+count_H;
-                if(sum >= result){
-                    if(arr[i]!= 0 && arr[j]!=0){
-                        result = sum;
-                        x = i;
-                        y = j;
+                if((sum >= result) && (arr[i]!= 0 && arr[j]!=0)){
+                    result = sum;
+                    x = i;
+                    y = j;
+                    if(y-x>max_len){
+                        max_len = y-x;
                     }
                 }
             }
@@ -43,6 +44,6 @@ int main() {
         
     }
 
-    cout << y-x;
+    cout << max_len;
     return 0;
 }
