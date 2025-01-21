@@ -7,8 +7,8 @@ int main() {
     // Please write your code here.
     int arr[5];
     int result = 0;
-    int ans = INT_MAX;
-    bool made = true;
+    int ans = 5000;
+    
     for(int i = 0; i<5;i++){
         cin >> arr[i];
         result += arr[i];
@@ -21,9 +21,9 @@ int main() {
                         int tmp1 = arr[i] + arr[j];
                         int tmp2 = arr[k] + arr[l];
                         int tmp3 = result - tmp1 - tmp2;
-                        if(tmp1 == tmp2 || tmp2 == tmp3 || tmp1 == tmp3 ){
+                        if(tmp1 == tmp2 || tmp2 == tmp3 || tmp1 == tmp3){
                             break;
-                            made = false;
+                        
                         }
                         int biggest = max(tmp1,max(tmp2,tmp3));
                         int smallest = min(tmp1,min(tmp2,tmp3));
@@ -35,11 +35,11 @@ int main() {
             }
         }
     }
-    if(made){
-        cout << ans;
+    if(ans == 5000){
+        cout << -1;
     }
     else{
-        cout << -1;
+        cout << ans;
     }
     return 0;
 }
