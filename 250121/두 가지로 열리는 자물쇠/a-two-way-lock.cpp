@@ -13,9 +13,9 @@ int main() {
     for(int i = 1; i<=n; i++){
         for(int j = 1; j<=n;j++){
             for(int k = 1; k<=n; k++){
-                if((abs(a1 - i) % n <= 2 || abs(a1 - i) % n >= n-2)
-                && (abs(b1-j) % n <= 2 || abs(b1-j) % n >= n-2)
-                && (abs(c1-k)% n <= 2 || abs(c1-k) % n >= n-2)){
+                if((abs(a1 - i) % n <= 2 || abs(a1 - i) % n >= abs(n-2))
+                && (abs(b1-j) % n <= 2 || abs(b1-j) % n >= abs(n-2))
+                && (abs(c1-k)% n <= 2 || abs(c1-k) % n >= abs(n-2))){
                     cnt++;
                 }
                 
@@ -25,9 +25,7 @@ int main() {
                     cnt++;
                 }
 
-                if(a1 == a2 && b1 == b2 && c1 == c2){
-                    cnt--;
-                }
+                
             }
         }
     }
