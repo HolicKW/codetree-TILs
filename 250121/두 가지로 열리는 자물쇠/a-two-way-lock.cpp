@@ -19,9 +19,9 @@ int main() {
                     cnt++;
                 }
                 
-                else if((abs(a2 - i) % n <= 2 || abs(a2 - i) % n >= n-2)
-                && (abs(b2-j) % n <= 2 || abs(b2-j) % n >= n-2)
-                && (abs(c2-k)% n <= 2 || abs(c2-k) % n >= n-2)){
+                else if((abs(a2 - i) % n <= 2 || abs(a2 - i) % n >= abs(n-2))
+                && (abs(b2-j) % n <= 2 || abs(b2-j) % n >= (n-2))
+                && (abs(c2-k)% n <= 2 || abs(c2-k) % n >= (n-2))){
                     cnt++;
                 }
 
