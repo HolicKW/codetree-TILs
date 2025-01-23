@@ -33,9 +33,7 @@ int main() {
 
     int result = 0;
     for(int i =1;i<=3; i++){
-        if(count[i]>count[result]){
-            result = count[i];
-        }
+        result = max(result,count[i]);
     }
 
     cout << result;
