@@ -34,7 +34,7 @@ int main() {
     int result = 0;
     for(int i =1;i<=3; i++){
         if(count[i]>count[result]){
-            result = i;
+            result = count[i];
         }
     }
 
