@@ -23,7 +23,7 @@ int cal(){
 }
 
 void choose(int count){
-    if(count == s.length()){
+    if(count == 6){
         ans = max(ans,cal());
         return;
     }
