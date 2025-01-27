@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <climits>
 using namespace std;
 char arr[201];
 string s;
 int num[6];
-int ans = 0;
+int ans;
 int cal(){
     int result = num[arr[0] - 'a'];
     for(int i = 1; i<s.length()-1; i++){
