@@ -20,13 +20,13 @@ int main() {
         umap2.insert(b[i]);   
     }
     int cnt = 0;
-    for(int i = 0; i<a1;i++){
+    for(int i = 0; i<b1;i++){
         if(umap1.find(b[i]) == umap1.end()){
             cnt++;
         }
     }
 
-    for(int i = 0; i<b1;i++){
+    for(int i = 0; i<a1;i++){
         if(umap2.find(a[i]) == umap2.end()){
             cnt++;
         }
