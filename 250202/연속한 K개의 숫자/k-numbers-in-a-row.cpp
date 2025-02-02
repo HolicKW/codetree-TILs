@@ -1,45 +1,42 @@
 #include <iostream>
 #include <climits>
+
+#define MAX_N 100000
+
 using namespace std;
 
-int arr[100001];
-int sum[100001];
-int a[100000];
+// 변수 선언
+int n, k, b;
+int arr[MAX_N + 1];
+int prefix_sum[MAX_N + 1];
+int ans = INT_MAX;
+
+// [s, e] 구간 내의 원소의 합을 반환합니다.
+int GetSum(int s, int e) {
+    return prefix_sum[e] - prefix_sum[s - 1];
+}
+
 int main() {
-    // Please write your code here.
-    int n,k,b;
+    // 입력:
     cin >> n >> k >> b;
-    for(int i = 0; i<=n;i++){
-        arr[i] = 1;
-    }
-    for(int i = 0; i<b;i++){
-        int num;
-        cin >> num;
-        arr[num] = 0;
-    }
-
-    for(int i = 1; i<=n;i++){
-        if(arr[i] == 1){
-            sum[i] = sum[i-1] + 1;
-        }
-    }
-    int result = INT_MAX;
-    int right = 0;
-    int left = 0;
-    for(int i = 1; i<=n;i++){
-        if(arr[i] == 0 && sum[i-1]>0 && sum[i+1]>0){
-            left = sum[i-1];
-            for(int j =i+1; j<=n; j++){
-                if(sum[j] == 0){
-                    right = sum[j-1];
-                    break;
-                }
-            }
-            result = min(result,k-left-right);
-        }
+    while(b--) {
+        int x;
+        cin >> x;
+        // 해당 숫자들이 주어진 자리에
+        // 숫자 1을 적어줍니다.
+        arr[x] = 1;
     }
 
-    cout << result;
+    // 누적합 배열을 만들어줍니다.
+    prefix_sum[0] = 0;
+    for(int i = 1; i<= n; i++)
+        prefix_sum[i] = prefix_sum[i - 1] + arr[i];
+    
+    // 모든 구간에 대해 합을 찾아
+    // 그 중 최솟값을 갱신합니다.
+    for(int i = 1; i <= n - k + 1; i++)
+        ans = min(ans, GetSum(i, i + k - 1));
 
+    cout << ans;
     return 0;
 }
