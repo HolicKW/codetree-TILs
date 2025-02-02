@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
 int arr[100001];
@@ -15,26 +16,30 @@ int main() {
         int num;
         cin >> num;
         arr[num] = 0;
-        a[i] = num;
     }
 
     for(int i = 1; i<=n;i++){
-        if(sum[i] == 1){
+        if(arr[i] == 1){
             sum[i] = sum[i-1] + 1;
         }
     }
-    int cnt = 0;
-    for(int i =0;i<b;i++){
-        arr[a[i]] = 1;
-        cnt++;
-        for(int j=1; j<=n;j++){
-            sum[j] = sum[j-1]+1;
-            if(sum[j] == k){
-                cout << cnt;
-                return 0;
+    int result = INT_MAX;
+    int right = 0;
+    int left = 0;
+    for(int i = 1; i<=n;i++){
+        if(arr[i] == 0 && sum[i-1]>0 && sum[i+1]>0){
+            left = sum[i-1];
+            for(int j =i+1; j<=n; j++){
+                if(sum[j] == 0){
+                    right = sum[j-1];
+                    break;
+                }
             }
+            result = min(result,k-left-right);
         }
     }
+
+    cout << result;
 
     return 0;
 }
