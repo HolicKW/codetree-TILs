@@ -36,6 +36,7 @@ int main() {
         else{
             cout << *s.rbegin() << " " << *s.begin() << endl;
         }
+        s.clear();
     }
     return 0;
 }
