@@ -26,7 +26,7 @@ int main() {
                     s.erase(*s.rbegin());
                 }
                 else if(a == -1){
-                    s.erase(*s.begin());
+                    s.erase(s.begin());
                 }
             }
         }
