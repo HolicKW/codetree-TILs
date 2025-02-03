@@ -18,7 +18,7 @@ int main() {
             sum[i][j] = arr[i][j] + sum[i-1][j] + sum[i][j-1] - sum[i-1][j-1]; 
         }
     }
-    int result =0;
+    int result = -1e9;
     for(int a1 = 1; a1<=n;a1++){
         for(int b1= 1; b1<=n;b1++){
             for(int a2=a1;a2<=n;a2++){
