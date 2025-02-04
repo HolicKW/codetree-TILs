@@ -17,12 +17,15 @@ int main() {
     }
 
     for(int i = 0; i<n;i++){
-        if(s.lower_bound(arr[i])!=s.end() && *(s.lower_bound(arr[i])) <= arr[i]){
-            cnt++;
-            s.erase(arr[i]);
+        auto it = s.upper_bound(arr[i]);
+
+        if(it==s.begin()){
+            break;
         }
         else{
-            break;
+            it--;
+            cnt++;
+            s.erase(it);
         }
     }
 
