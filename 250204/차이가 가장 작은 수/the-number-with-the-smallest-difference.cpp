@@ -15,7 +15,7 @@ int main() {
     }
     int result = INT_MAX;
     for(int i = 0; i<n;i++){
-        auto it = s.upper_bound(arr[i]+m);
+        auto it = s.lower_bound(arr[i]+m);
         if(it!=s.end()){
             int ans = *it - arr[i]; 
             result = min(result,ans);
