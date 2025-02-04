@@ -17,7 +17,7 @@ int main() {
     }
 
     for(int i = 0; i<n;i++){
-        if(s.lower_bound(arr[i])!=s.end() && *(s.lower_bound(arr[i])) == arr[i]){
+        if(s.lower_bound(arr[i])!=s.end() && *(s.lower_bound(arr[i])) <= arr[i]){
             cnt++;
             s.erase(arr[i]);
         }
