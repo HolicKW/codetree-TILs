@@ -18,7 +18,7 @@ int main(){
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
-    pq.push(n-1);
+    pq.push(arr[n-1]);
     sum_val += arr[n-1];
     for(int i = n-2; i>=0; i--){
         pq.push(i);
