@@ -20,7 +20,7 @@ int main(){
     }
     pq.push(arr[n-1]);
     sum_val += arr[n-1];
-    for(int i = n-2; i>=0; i--){
+    for(int i = n-2; i>=1; i--){
         pq.push(arr[i]);
         sum_val += arr[i];
 
