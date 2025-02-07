@@ -9,7 +9,7 @@ int main() {
     cin >> n;
     int arr[n];
     priority_queue<int,vector<int>,greater<int>> pq;
-    int result = 0;
+    long result = 0;
     for(int i =0 ; i<n;i++){
         cin >> arr[i];
         pq.push(arr[i]);
