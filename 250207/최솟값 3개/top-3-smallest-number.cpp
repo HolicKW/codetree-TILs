@@ -21,7 +21,7 @@ int main() {
             a= pq.top(); pq.pop();
             b= pq.top(); pq.pop();
             c= pq.top(); pq.pop();
-            result = a*b*c;
+            result = long(a*b*c);
             pq.push(a);pq.push(b);pq.push(c);
             cout << result<<endl;
         }
