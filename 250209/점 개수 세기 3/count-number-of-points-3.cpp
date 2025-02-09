@@ -14,15 +14,16 @@ int main() {
         s.insert(num);
 
     }
-    
+    int idx=1;
+    for(int num : s){
+        umap[num] = idx++;
+    }
     for(int i = 0; i<q;i++){
         int a,b;
         cin >> a >> b;
-        int cnt = 0;
-        for(auto it = s.lower_bound(a); it != s.upper_bound(b); it++){
-            cnt++;
-        }
-        cout << cnt << endl;
+        int ans = umap[b]-umap[a];
+        
+        cout << ans+1 << endl;
     }
     return 0;
 }
