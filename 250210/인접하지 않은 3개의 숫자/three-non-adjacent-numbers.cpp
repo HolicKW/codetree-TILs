@@ -20,7 +20,7 @@ int main() {
     }
 
     R[n] = arr[n];
-    R[n-1] = max(arr[n+1],arr[n]);
+    R[n-1] = max(arr[n-1],arr[n]);
     for(int i = n - 2; i >= 1; i--){
         R[i] =max(R[i+1],R[i+2]+arr[i]);
     }
