@@ -26,10 +26,10 @@ int main() {
         }
         R[i] = Wcount;
     }
-    int result = 0;
+    long result = 0;
     for(int i = 1;i<=n-1;i++){
         if(arr[i] == 'O'){
-            result += L[i-1] * R[i+1];
+            result += long(L[i-1]) * long(R[i+1]);
         }
     }
 
