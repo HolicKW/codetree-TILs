@@ -17,14 +17,14 @@ int main() {
         if(arr[i] == 'C'){
             Ccount++;
         }
-        L[i] = max(L[i-1],Ccount);
+        L[i] = Ccount;
     }
     int Wcount = 0;
     for(int i = n;i>=1;i--){
         if(arr[i] == 'W'){
             Wcount++;
         }
-        R[i] = max(R[i+1],Wcount);
+        R[i] = Wcount;
     }
     int result = 0;
     for(int i = 1;i<=n-1;i++){
