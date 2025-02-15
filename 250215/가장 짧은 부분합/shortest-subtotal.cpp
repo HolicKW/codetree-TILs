@@ -7,14 +7,14 @@ int main() {
     int n,s;
     cin >> n >> s;
     int result = 100001;
-    for(int i = 0; i<n;i++){
+    for(int i = 1; i<=n;i++){
         cin >> arr[i];
     }
 
-    int j = 0;
-    for(int i = 0; i<n;i++){
+    int j = 1;
+    for(int i = 1; i<=n;i++){
         int sum = 0;
-        while(j <= n-1 && sum + arr[j] <= s){
+        while(j <= n && sum + arr[j] <= s){
             sum += arr[j];
             j++;
             
