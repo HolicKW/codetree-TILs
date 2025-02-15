@@ -14,13 +14,14 @@ int main() {
     int j = 1;
     for(int i = 1; i<=n;i++){
         int sum = 0;
-        while(j <= n && sum + arr[j] <= s){
+        while(j <= n && sum <= s){
             sum += arr[j];
             j++;
             
         }
         result = min(result, j-i+1);
 
+        sum -= arr[i];
     }
 
     
