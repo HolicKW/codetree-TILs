@@ -9,7 +9,7 @@ int main() {
     for(int i =0; i<n;i++){
         cin >> arr[i];
     }
-    int count[MAX+1];
+    int count[MAX+1] = {0,};
     int j = 0;
     int result = 0;
     for(int i = 0; i<n;i++){
