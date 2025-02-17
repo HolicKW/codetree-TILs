@@ -24,7 +24,7 @@ int main() {
             break;
         }
         
-        cnt = j-i;
+        cnt += j-i;
     }
 
     cout <<cnt;
