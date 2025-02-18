@@ -18,7 +18,7 @@ int main() {
     int result = INT_MAX;
     int ans = 0;
     for(int i = 0; i<n;i++){
-        while(j-1>=i && arr[i]+arr[j]>0){
+        while(j-1>=i){
             result = min(result,abs(arr[i]+arr[j]));
             j--;
         }
