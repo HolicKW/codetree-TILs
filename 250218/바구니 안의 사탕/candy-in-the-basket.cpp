@@ -25,7 +25,7 @@ int main() {
 
         result = max(result,ans);
 
-        ans -= arr[i].first;
+        ans -= arr[i].second;
     }
 
     cout << result;
