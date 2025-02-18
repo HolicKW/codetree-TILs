@@ -14,14 +14,15 @@ int main() {
     }
     
     sort(arr,arr+n);
-    int j = n-1;
     int result = INT_MAX;
+    int j = n-1;
     int ans = 0;
     for(int i = 0; i<n;i++){
-        while(j-1>=i){
+        while(i<j){
             result = min(result,abs(arr[i]+arr[j]));
             j--;
         }
+
     }
 
     cout << result;
