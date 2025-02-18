@@ -9,7 +9,7 @@ int main() {
     for(int i =0; i<n;i++){
         int num,dir;
         cin >> num >> dir;
-        arr[i] = {num,dir};
+        arr[i] = {dir,num};
     }
 
     sort(arr,arr+n);
@@ -18,8 +18,8 @@ int main() {
     int result = 0;
     int j = 0;
     for(int i = 0; i<n;i++){
-        while(j<n && arr[j].second - arr[i].second <= 2*k){
-            ans += arr[j].first;
+        while(j<n && arr[j].first - arr[i].first <= 2*k){
+            ans += arr[j].second;
             j++;
         }
 
