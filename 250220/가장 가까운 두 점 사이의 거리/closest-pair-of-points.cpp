@@ -21,8 +21,9 @@ int main() {
             min_y = min(min_y,abs(arr[i].second - arr[j].second));
             
         }
+        ans = min(ans,(min_x*min_x) + (min_y*min_y));
     }
 
-    cout << (min_x*min_x) + (min_y*min_y);
+    cout << ans;
     return 0;
 }
