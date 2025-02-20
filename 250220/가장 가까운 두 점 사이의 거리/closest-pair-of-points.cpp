@@ -1,27 +1,27 @@
 #include <iostream>
 #include <climits>
 #include <cmath>
+
 using namespace std;
+
 int n;
-pair<int ,int>arr[101];
+pair<int, int> arr[101];
+
 int main() {
-    // Please write your code here.
     cin >> n;
-    for(int i = 0; i<n;i++){
-        int x,y;
-        cin >> x >> y;
-        arr[i] = {x,y};
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i].first >> arr[i].second;
     }
-    int ans = INT_MAX;
-    int min_x = INT_MAX;
-    int min_y = INT_MAX; 
-    for(int i = 0; i<n;i++){
-        for(int j = i+1; j<n;j++){
-            min_x = min(min_x,abs(arr[i].first - arr[j].first)); 
-            min_y = min(min_y,abs(arr[i].second - arr[j].second));
-            
+
+    int ans = INT_MAX; // 최소 거리의 제곱을 저장할 변수
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            int dx = arr[i].first - arr[j].first;
+            int dy = arr[i].second - arr[j].second;
+            int dist_sq = dx * dx + dy * dy; // 거리의 제곱 계산
+            ans = min(ans, dist_sq);
         }
-        ans = min(ans,(min_x*min_x) + (min_y*min_y));
     }
 
     cout << ans;
