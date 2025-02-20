@@ -26,7 +26,7 @@ int main() {
         for(int j =i+1;j<n;j++){
             for(int k = j+1; k<n;k++){
                 if(((arr[i].first == arr[j].first) || (arr[i].first == arr[k].first) ||  (arr[j].first == arr[k].first)) &&
-                ((arr[i].second == arr[j].second) || arr[i].second == arr[k].second) ||  (arr[j].second == arr[k].second)){
+                ((arr[i].second == arr[j].second) || (arr[i].second == arr[k].second) ||  (arr[j].second == arr[k].second))){
                     ans = max(ans,triangle_area(i,j,k));
                 }
             }
