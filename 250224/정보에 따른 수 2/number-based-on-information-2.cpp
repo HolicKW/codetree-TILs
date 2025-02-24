@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 char arr[1001];
 int main() {
@@ -7,16 +8,18 @@ int main() {
     char alp;
     int num;
     cin >> t >> a >> b;
+    int max_dir = 0;
     for(int i =0;i<t;i++){
         cin >> alp >> num;
         arr[num] = alp;
+        max_dir = max(max_dir,num);
     }
     int cnt = 0;
     for(int i = a;i<=b;i++){
         
         int s_dir = 1001;
         int n_dir = 1001;
-        for(int j = a;j<=b;j++){
+        for(int j = a;j<=max_dir;j++){
             if(arr[j] == 'S' && abs(j-i)<s_dir){
                 s_dir = abs(j-i);
             }
