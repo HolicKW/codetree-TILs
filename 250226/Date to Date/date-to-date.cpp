@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int days[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+int main() {
+    // Please write your code here.
+    int m1,m2,d1,d2;
+    cin >> m1 >> d1 >> m2 >> d2;
+    int date=0;
+    for(int i = m1; i <=m2;i++){
+        if(i == m1){
+            date += days[i] - d1+1;
+        }
+        else if(i == m2){
+            date += d2;
+        }
+        else{
+            date += days[i];
+        }
+        
+    }
+    cout << date;
+    return 0;
+}
