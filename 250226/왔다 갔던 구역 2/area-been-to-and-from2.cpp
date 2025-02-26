@@ -11,18 +11,20 @@ int main() {
     cin >> n;
     for(int i = 0; i<n;i++){
         cin >> x >> dir;
-        
+        int a,b;
         if(dir == 'L'){
-            for(int i = 0;i<x;i++){
-                arr[loc]++;
-                loc--;
-            }
+            a = loc-x;
+            b = loc;
+            loc = loc-x;
         }
         else{
-            for(int i = 0;i<x;i++){
-                arr[loc]++;
-                loc++;
-            }
+            a = loc;
+            b = loc+x;
+            loc = loc+x;
+        }
+
+        for(int i = a;i<b;i++){
+            arr[i]++;
         }
     }
     int cnt = 0;
