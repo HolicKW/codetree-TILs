@@ -40,6 +40,9 @@ int main() {
     if(t){
         cout << (max_x-min_x+1) * (max_y-min_y+1);
     }
+    else{
+        cout << 0;
+    }
     
     return 0;
 }
