@@ -5,7 +5,7 @@ int main() {
     // Please write your code here.
     int a,b,c;
     cin >> a >> b >> c;
-    if(a<=11 && b<=11 && c<=11){
+    if(a<11 && b<11 && c<11){
         cout << -1;
         return 0;
     }
