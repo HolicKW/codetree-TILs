@@ -7,18 +7,10 @@ int main() {
     int m1,m2,d1,d2;
     cin >> m1 >> d1 >> m2 >> d2;
     int date=0;
-    for(int i = m1; i <=m2;i++){
-        if(i == m1){
-            date += days[i] - d1+1;
-        }
-        else if(i == m2){
-            date += d2;
-        }
-        else{
-            date += days[i];
-        }
-        
+    for(int i = m1; i <m2;i++){
+        date += days[i];
     }
+    date += d2-d1+1;
     cout << date;
     return 0;
 }
