@@ -9,6 +9,8 @@ int main() {
     for(int i = 0; i<n;i++){
         int x,y;
         cin >> x >> y;
+        x+=100;
+        y+=100;
         for(int i = x;i<x+8;i++){
             for(int j = y;j<y+8;j++){
                 arr[i][j]++;
