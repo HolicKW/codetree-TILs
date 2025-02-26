@@ -8,7 +8,7 @@ int sum_date(int m,int d){
         date += days[i];
     }
     date+=d;
-    return d;
+    return date;
 }
 int main() {
     // Please write your code here.
