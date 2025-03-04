@@ -6,7 +6,7 @@ int n,m;
 int dx[4] = {0,1,0,-1};
 int dy[4] = {1,0,-1,0};
 bool inRange(int x, int y){
-    return x>=0 && x<n && y>=0 && y<n;
+    return x>=0 && x<n && y>=0 && y<m;
 }
 int main() {
     // Please write your code here.
