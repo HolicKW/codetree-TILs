@@ -15,7 +15,7 @@ int main() {
     for(int i = 1; i<max_height; i++){
         int cnt = 0;
         for(int j = 0; j<n;j++){
-            if(arr[j]-i >0 && arr[j+1] - i <= 0){
+            if(arr[j] > i && arr[j+1] <= i){
                 cnt++;
             }
         }
