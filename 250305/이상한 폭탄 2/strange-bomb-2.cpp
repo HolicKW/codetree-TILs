@@ -13,9 +13,7 @@ int main() {
     for(int i = 0; i<n;i++){
         for(int j = i+1;j<n;j++){
             if(arr[i] == arr[j] && j-i <= k){
-                for(int t = i; t<=j; t++){
-                    ans = max(ans,arr[t]);
-                }
+                ans = max(ans,arr[i]);
             }
         }
     }
