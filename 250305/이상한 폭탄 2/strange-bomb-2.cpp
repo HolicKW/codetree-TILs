@@ -17,7 +17,11 @@ int main() {
             }
         }
     }
-
-    cout << ans;
+    if(ans == 0){
+        cout << -1;
+    }
+    else{
+        cout << ans;
+    }
     return 0;
 }
