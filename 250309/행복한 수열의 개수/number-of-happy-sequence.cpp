@@ -7,7 +7,10 @@ int arr[101][101];
 
 int main() {
     cin >> n >> m;
-
+    if(n == 1 && m == 1){
+        cout << 2;
+        return 0;
+    }
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             cin >> arr[i][j];
