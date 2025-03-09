@@ -15,7 +15,6 @@ int main() {
     }
     int ans  = 0;
     for(int i = 0; i<n; i++){
-        int num = arr[i][0];
         int cnt = 1;
         for(int j = 1; j<n;j++){
             if(arr[i][j] == arr[i][j-1]){
@@ -24,9 +23,11 @@ int main() {
             else{
                 cnt = 1;
             }
-        }
-        if(cnt >=m){
-            ans++;
+
+            if(cnt >=m){
+                ans++;
+                break;
+            }
         }
     }
     for(int i = 0; i<n; i++){
@@ -38,9 +39,10 @@ int main() {
             else{
                 cnt = 1;
             }
-        }
-        if(cnt >= m){
-            ans++;
+            if(cnt >= m){
+                ans++;
+                break;
+            }
         }
     }
     
