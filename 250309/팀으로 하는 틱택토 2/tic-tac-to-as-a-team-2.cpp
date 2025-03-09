@@ -2,6 +2,7 @@
 using namespace std;
 
 int arr[3][3];
+int num[10];
 int main() {
     // Please write your code here.
     for(int i = 0 ;i<3;i++){
@@ -9,9 +10,20 @@ int main() {
             char c;
             cin >> c;
             arr[i][j] = c-'0';
+            num[arr[i][j]]++;
         }
     }
     int ans = 0;
+    int cnt = 0;
+    for(int i = 0; i<=9;i++){
+        if(num[i] > 0){
+            cnt++;
+        }
+    }
+    if(cnt == 2){
+        cout << 1;
+        return 0;
+    }
     for(int i = 0; i<3;i++){
         int count[10] = {0,};
         int cnt=0;
