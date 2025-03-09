@@ -3,16 +3,22 @@ using namespace std;
 
 int a,b,c;
 int ans = 0;
-int sol(int x,int y){
-    if(a*x + b*y > c){
-        return 0;
-    }
 
-    return max(a*x+b*y,max(sol(x+1,y),sol(x,y+1)));
-}
 int main() {
     // Please write your code here.
     cin >> a >> b >> c;
-    cout << sol(0,0);
+    for(int i = 0;i<1000;i++){
+        int sum = 0;
+        for(int j = 0; j<1000;j++){
+            sum = a*i + b*j;
+            if(sum <=c){
+                ans = max(ans,sum);
+            }
+            else{
+                break;
+            }
+        }
+    }
+    cout << ans;
     return 0;
 }
