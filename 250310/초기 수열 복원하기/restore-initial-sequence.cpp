@@ -2,7 +2,7 @@
 using namespace std;
 
 int arr[1001];
-int count[2001];
+int count[1001];
 int main() {
     // Please write your code here.
     int n;
@@ -14,7 +14,7 @@ int main() {
 
     for(int i = 1; i<=n;i++){
         count[0] = i;
-        int num_count[1001] ={0,};
+        int num_count[2001] ={0,};
         num_count[count[0]]++;
         bool check = false;
         for(int j = 1; j<n;j++){
