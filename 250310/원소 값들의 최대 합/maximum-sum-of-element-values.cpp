@@ -6,17 +6,18 @@ int main() {
     // Please write your code here.
     int n,m;
     cin >> n >> m;
-    for(int i = 0; i<n;i++){
+    for(int i = 1; i<=n;i++){
         cin >> arr[i];
     }
     int ans = 0;
     for(int i = 1; i<=n;i++){
         int sum = 0;
-        int idx = i-1;
-        while(m>0){
+        int idx = i;
+        int steps = m;
+        while(steps>0){
             sum += arr[idx];
-            idx = arr[idx] - 1;
-            m--;
+            idx = arr[idx];
+            steps--;
         }
         ans = max(ans,sum);
     }
