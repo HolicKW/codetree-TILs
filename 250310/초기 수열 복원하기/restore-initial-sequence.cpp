@@ -2,7 +2,7 @@
 using namespace std;
 
 int arr[1001];
-int count[1000];
+int count[1001];
 int main() {
     // Please write your code here.
     int n;
