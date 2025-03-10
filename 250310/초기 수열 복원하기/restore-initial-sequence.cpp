@@ -20,7 +20,7 @@ int main() {
         for(int j = 1; j<n;j++){
             count[j] = arr[j-1] - count[j-1];
             num_count[count[j]]++;
-            if(num_count[count[j]] > 1 || count[j] < 1 ){
+            if(num_count[count[j]] > 1 || count[j] < 1 || count[j]>n){
                 break;
             }
             if(j==n-1){
