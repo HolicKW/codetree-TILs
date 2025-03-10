@@ -2,7 +2,7 @@
 using namespace std;
 
 int arr[1001];
-int count[1001];
+int count[1000];
 int main() {
     // Please write your code here.
     int n;
@@ -20,7 +20,7 @@ int main() {
         for(int j = 1; j<n;j++){
             count[j] = arr[j-1] - count[j-1];
             num_count[count[j]]++;
-            if(num_count[count[j]] > 1 || count[j] < 1 || count[j]>n){
+            if(num_count[count[j]] > 1 || count[j] < 1 || count[j]>n ){
                 break;
             }
             if(j==n-1){
@@ -30,6 +30,9 @@ int main() {
         
         if(check){
             for(int j = 0; j<n;j++){
+                if(count[j] == 0){
+                    continue;
+                }
                 cout << count[j]<< ' ';
             }
             return 0;
