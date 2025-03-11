@@ -13,7 +13,7 @@ int main() {
     int sum = 0;
     for(int i = 0; i<n;i++){
         int cnt = 0;
-        int prev = 0;
+        int prev = i;
         for(int j = i+1; j<n;j++){
             if(arr[i] == arr[j] && j-prev <= k){
                 cnt++;
