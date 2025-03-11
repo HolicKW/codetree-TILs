@@ -21,7 +21,7 @@ int main() {
             }
 
         }
-        if(cnt>=sum){
+        if(cnt>=sum && cnt != 0){
             sum = cnt;
             ans = arr[i];
         }
