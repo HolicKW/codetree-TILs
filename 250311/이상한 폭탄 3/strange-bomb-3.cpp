@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int arr[101];
-int bomb[101];
+int bomb[10000001];
 bool explode[101];
 int main() {
     // Please write your code here.
@@ -21,15 +21,15 @@ int main() {
 
             if(explode[i] == false){
                 explode[i] = true;
-                bomb[i]++;
+                bomb[arr[i]]++;
             }
             if(explode[j] == false){
                 explode[j] = true;
-                bomb[j]++;
+                bomb[arr[j]]++;
             }
         }
     }
-    for(int i = 0; i<n;i++){
+    for(int i = 0; i<1000000;i++){
         if(bomb[i] >= ans){
             ans = bomb[i];
             idx = i;
