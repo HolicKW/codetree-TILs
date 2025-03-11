@@ -17,13 +17,13 @@ int main() {
         for(int j = i+1; j<n;j++){
             if(arr[i] == arr[j] && j-prev <= k){
                 cnt++;
-                prev = j;
             }
-
+            prev = j;
         }
         if(cnt>=sum && cnt != 0){
             sum = cnt;
             ans = arr[i];
+            
         }
 
     }
