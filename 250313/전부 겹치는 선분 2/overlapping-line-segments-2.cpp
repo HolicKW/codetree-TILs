@@ -21,7 +21,7 @@ int main() {
 
         
     }
-    if(cnt == 1 || n-cnt == 1){
+    if(cnt == 1 || n-cnt == 2){
         cout << "Yes";
     }
     else{
