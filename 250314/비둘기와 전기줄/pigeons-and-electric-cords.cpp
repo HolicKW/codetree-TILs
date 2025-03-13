@@ -12,7 +12,7 @@ int main() {
         vec[num].push_back(dir);
     }
     int cnt = 0;
-    for(int i = 0; i<10;i++){
+    for(int i = 0; i<11;i++){
         if(vec[i].size() < 2){
                 continue;
         }
