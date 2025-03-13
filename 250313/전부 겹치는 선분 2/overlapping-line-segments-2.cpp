@@ -51,9 +51,9 @@ int main() {
 
     // 결과 출력
     if (cnt == 1 || n - cnt == 1) {
-        cout << " Yes";
+        cout << "Yes";
     } else {
-        cout << " No";
+        cout << "No";
     }
     return 0;
 }
