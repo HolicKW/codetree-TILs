@@ -11,17 +11,19 @@ int main() {
     int cnt = 0;
     for(int i = 0; i<n;i++){
         cin >> x >> x2;
-        if(x >= min_x2){
+        if(min_x2 >= x){
+            max_x1 = max(max_x1,x);
+            min_x2 = min(min_x2,x2);
+        }
+        else{
             cnt++;
             continue;
         }
-        max_x1 = max(max_x1,x);
-        min_x2 = min(min_x2,x2);
 
         
     }
 
-    if(cnt == 1){
+    if(cnt == 1 || n-cnt == 1){
         cout << "Yes";
     }
     else{
