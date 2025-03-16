@@ -20,7 +20,7 @@ void sol(int row){
     }
 
     for(int i = 0;i<n;i++){
-        if(visited[i]) continue;
+        if(visited[i]) continue; //해당 열에 이미 방문한 적이 있다면 건너 뜀
         visited[i] = true;
         vec.push_back(i);
         sol(row+1);
