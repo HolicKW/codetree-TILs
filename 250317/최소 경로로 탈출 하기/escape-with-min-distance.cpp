@@ -51,6 +51,12 @@ int main() {
     q.push({0,0});
     Push(0,0,0);
     bfs();
-    cout << step[n-1][m-1];
+    int ans = step[n-1][m-1];
+    if(ans > 0){
+        cout << ans;
+    }
+    else{
+        cout << -1;
+    }
     return 0;
 }
