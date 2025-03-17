@@ -44,6 +44,13 @@ int main() {
     r1--; c1--; r2--; c2--;
     q.push({r1,c1});
     bfs();
-    cout << arr[r2][c2];
+    
+    int ans = arr[r2][c2];
+    if(ans == 0){
+        cout << -1;
+    }
+    else{
+        cout << ans;
+    }
     return 0;
 }
