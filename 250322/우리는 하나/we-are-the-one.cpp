@@ -66,7 +66,7 @@ void sol(int idx ,int cnt){
         ans = max(ans,bfs());
         return;
     }
-    if(idx >= n*n){
+    if(cnt > k){
         return;
     }
     for(int i = idx; i<n*n;i++){
