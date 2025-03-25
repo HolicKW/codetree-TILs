@@ -18,12 +18,14 @@ int main() {
             if(i >= arr[j]){
                 if(dp[i-arr[j]] == INT_MIN) continue;
                 sum += dp[i-arr[j]];
+                
             }
             dp[i] = max(dp[i],sum);
+            dp[i]%=10007;
         }
     }
 
-    
+
     cout << dp[n] << ' ';
     
     // Please write your code here.
