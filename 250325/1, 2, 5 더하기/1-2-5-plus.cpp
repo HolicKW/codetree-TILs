@@ -9,8 +9,6 @@ int main() {
     int arr[3] = {1,2,5};
     dp[0] = 1;
     dp[1] = 1;
-    dp[2] = 2;
-    dp[5] = 9;
     for(int i = 2; i<=n; i++){
         dp[i] = INT_MIN;
         int sum = 0;
