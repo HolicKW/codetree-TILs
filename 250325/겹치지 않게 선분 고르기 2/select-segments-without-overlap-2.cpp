@@ -13,11 +13,10 @@ int main(){
     for(int i = 1; i<=n;i++){
         cin >> p[i].first >> p[i].second;
     }
-    sort(p,p+n);
-    for(int i = 0; i<=n;i++){
-        dp[i] = INT_MIN;
+    sort(p+1,p+n+1);
+    for(int i = 1; i<=n;i++){
+        dp[i] = 1;
     }
-    dp[1] = 1;
     int ans = 0;
     for(int i = 1; i<=n; i++){
         for(int j = 1; j<i; j++){
