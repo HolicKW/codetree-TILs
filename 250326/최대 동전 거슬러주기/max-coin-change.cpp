@@ -25,7 +25,7 @@ int main() {
         }
     }
     if(dp[m] == INT_MIN){
-        cout << '-1';
+        cout << -1;
     }
     else{
         cout << dp[m];
