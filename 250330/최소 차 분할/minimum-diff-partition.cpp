@@ -2,7 +2,7 @@
 #include <climits>
 using namespace std;
 int arr[100];
-int dp[1000001];
+int dp[100001];
 int main() {
     // Please write your code here.
     int n;
