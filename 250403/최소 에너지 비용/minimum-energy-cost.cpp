@@ -15,10 +15,10 @@ int main() {
     }
     long long sum = 0;
     sum = arr[0] * dis[0];
-    long long min_cost = arr[0];
+    int min_cost = arr[0];
     for(int i = 1; i<n-1;i++){
         min_cost = min(min_cost,arr[i]);
-        sum += min_cost * dis[i];
+        sum += (long long)min_cost * dis[i];
     }
     cout << sum;
     return 0;
