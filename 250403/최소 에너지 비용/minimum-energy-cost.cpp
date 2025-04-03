@@ -14,8 +14,9 @@ int main() {
         cin >> arr[i];
     }
     long long sum = 0;
-    int min_cost = INT_MAX;
-    for(int i = 0; i<n-1;i++){
+    sum = arr[0] * dis[0];
+    int min_cost = arr[0];
+    for(int i = 1; i<n-1;i++){
         min_cost = min(min_cost,arr[i]);
         sum += min_cost * dis[i];
     }
