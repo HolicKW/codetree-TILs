@@ -3,16 +3,17 @@
 #include <climits>
 using namespace std;
 
-int n,s;
 int main() {
     // Please write your code here.
-    int n,s;
+    long long s;
     cin >> s;
-    int left = 1;
-    int right = s;
-    int mid_idx = INT_MIN;
+
+    long long left = 1;
+    long long right = 10e9;
+    long long mid_idx = 0;
+    
     while(left<=right){
-        int mid = (left+right)/2;
+        long long mid = (left+right)/2;
         if(mid*(mid+1) / 2 <= s){
             mid_idx = max(mid_idx,mid); 
             left = mid + 1;
