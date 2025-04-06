@@ -5,9 +5,6 @@ using namespace std;
 int n;
 
 int find_idx(int target){
-    if(target % 3 == 0 || target % 5  == 0){
-        return 0;
-    }
     return target - (target/3)  - (target /5)  + (target / 15);
 }
 int main() {
