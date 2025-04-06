@@ -1,9 +1,8 @@
 #include <iostream>
-#include <set>
+#include <algorithm>
 using namespace std;
-#define MAX 100000
+#define MAX 1000
 int arr[MAX];
-int num[MAX];
 
 int n,m;
 int lower_b(int target){
@@ -45,6 +44,7 @@ int main() {
     for(int i = 0; i<n;i++){
         cin >> arr[i];
     }
+    sort(arr,arr+n);
     for(int i = 0; i<m;i++){
         int a,b;
         cin >> a >> b;
