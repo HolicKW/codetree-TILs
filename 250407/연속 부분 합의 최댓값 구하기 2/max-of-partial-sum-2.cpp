@@ -12,15 +12,13 @@ int main() {
     int ans = arr[0];
     int sum = 0;
     for(int i = 0; i<n;i++){
-        if(sum>sum+arr[i]){
-            sum = 0;
-            continue;
-        }
-
         sum += arr[i];
-        
+
         if(sum > ans){
             ans = sum;
+        }
+        else if(sum < 0){
+            sum = 0;
         }
         
 
