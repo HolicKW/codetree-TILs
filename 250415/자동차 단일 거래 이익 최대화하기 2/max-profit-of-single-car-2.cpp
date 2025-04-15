@@ -10,16 +10,12 @@ int main() {
     for(int i = 0; i<n; i++){
         cin >> cost[i];
     }
-    int buy = INT_MAX;
+    int buy = cost[0];
     
     int ans = 0;
     for(int i = 0; i<n; i++){
+        ans = max(ans,cost[i]-buy);
         buy = min(buy,cost[i]);
-        int sell = INT_MIN;
-        for(int j = i+1; j<n;j++){
-            sell = max(sell,cost[j]);
-        }
-        ans = max(ans,sell-buy);
     }
     cout << ans;
     return 0;
