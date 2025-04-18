@@ -10,13 +10,15 @@ pair<long long, long long> line[MAX];
 
 bool isPossible(long long mid){
     long long count = 0;
+    long long last = -1e18;
     for(int i = 0; i < m; i++){
         long long start = line[i].first;
         long long end = line[i].second;
-
-        long long pos = start;
+        
+        long long pos = max(start, last + mid);
         while (pos <= end) {
             count++;
+            last = pos;
             if (count >= n) return true;
             pos += mid;
         }
