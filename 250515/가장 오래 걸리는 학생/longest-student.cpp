@@ -51,7 +51,7 @@ int main() {
     }
     for(int i = 1; i<n;i++){
         dijkstra(i);
-        ans = max(ans,dist[5]);
+        ans = max(ans,dist[n]);
     }
     cout << ans;
 
