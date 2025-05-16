@@ -2,23 +2,19 @@
 #include <vector>
 using namespace std;
 
-vector<vector<int>> tree;
-int n;
-
 int main() {
-    // Please write your code here.
+    int n;
     cin >> n;
-    tree.resize(n+1);
-    for(int i = 2; i<=n;i++){
-        int parent,child;
-        cin >> parent >> child;
-        tree[child].push_back(parent);
+    vector<int> parent(n+1); // parent[i]: i번 노드의 부모
+
+    for(int i = 2; i <= n; i++){
+        int p, c;
+        cin >> p >> c;
+        parent[c] = p; // c번 노드의 부모는 p
     }
-    for(int i = 2; i<=n;i++){
-        
-        cout<<tree[i][0]<<endl;
+
+    for(int i = 2; i <= n; i++){
+        cout << parent[i] << endl;
     }
-    
-    
     return 0;
 }
