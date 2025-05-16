@@ -1,40 +1,48 @@
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
-int dp[1001][1001];
-int card_one[1001];
-int card_two[1001];
+const int MAXN = 1005;
 int n;
+int a[MAXN], b[MAXN];
+int dp[MAXN][MAXN];
 
 int main() {
+    // 각 플레이어의 카드 정보를 입력받습니다.
     cin >> n;
-    for(int i = 1; i <= n; i++){
-        cin >> card_one[i];
-    }
-    for(int i = 1; i <= n; i++){
-        cin >> card_two[i];
-    }
+    for(int i = 1; i <= n; i++) cin >> a[i];
+    for(int i = 1; i <= n; i++) cin >> b[i];
+    
+    // dp 배열을 초기화합니다. 초기값은 -1로 설정합니다.
+    for(int i = 0; i <= n; i++)
+        for(int j = 0; j <= n; j++) dp[i][j] = -1;
 
-    for(int i = 1; i <= n; i++){
-        for(int j = 1; j <= n; j++){
-            // 1. 왼쪽만 버릴 수 있음
-            dp[i][j] = max(dp[i][j], dp[i-1][j]);
-            // 2. 오른쪽만 버리고 점수 획득
-            if(card_one[i] > card_two[j]) {
-                dp[i][j] = max(dp[i][j], dp[i][j-1] + card_two[j]);
-            }
-            // 3. 양쪽 모두 버릴 수 있음
-            if(card_one[i] == card_two[j]) {
-                dp[i][j] = max(dp[i][j], dp[i-1][j-1]);
-            }
+    // 기본 케이스를 설정합니다.
+    dp[0][0] = 0;
+
+    // 각 경우의 수를 동적 프로그래밍으로 계산합니다.
+    // dp[i][j] :: 첫 번째 플레이어는 i번 카드까지, 두 번째 플레이어는 j번 카드까지 버렸을 때 나올 수 있는 최대 점수
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            if(dp[i][j] == -1) continue;
+
+            // 카드 대결 - 첫 번째 플레이어의 카드가 더 작은 경우
+            if(a[i + 1] < b[j + 1])
+                dp[i + 1][j] = max(dp[i + 1][j], dp[i][j]);
+
+            // 카드 대결 - 두 번째 플레이어의 카드가 더 작은 경우
+            if(a[i + 1] > b[j + 1])
+                dp[i][j + 1] = max(dp[i][j + 1], dp[i][j] + b[j + 1]);
+
+            // 카드 버리기
+            dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i][j]);
         }
     }
+
+    // 결과를 계산하여 출력합니다.
     int ans = 0;
     for(int i = 0; i <= n; i++) {
         ans = max(ans, dp[i][n]);
         ans = max(ans, dp[n][i]);
     }
     cout << ans;
-    return 0;
 }
