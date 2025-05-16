@@ -3,6 +3,19 @@
 using namespace std;
 
 vector<vector<int>> graph;
+bool visited[100001];
+int parent[100001];
+void dfs(int node){
+    for(int i = 0; i<graph[node].size(); i++){
+        int next = graph[node][i];
+        if(!visited[next]){
+            visited[next]= true;
+            parent[next] = node;
+
+            dfs(next);
+        }
+    }
+}
 int main() {
     int n;
     cin >> n;
@@ -13,8 +26,9 @@ int main() {
         graph[p].push_back(c);
         graph[c].push_back(p);
     }
-    for(int i = 2;i<=n;i++){
-        cout << graph[i][0]<<endl;
-    }   
+    visited[1] = true;
+    dfs(1);   
+    for(int i = 2; i <= n; i++)
+        cout << parent[i] << endl;
     return 0;
 }
