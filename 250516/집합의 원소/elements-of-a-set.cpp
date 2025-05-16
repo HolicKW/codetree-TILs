@@ -31,7 +31,7 @@ int main() {
             Union(a,b);
         }
         else{
-            if(find(a) == find(b)){
+            if(Find(a) == Find(b)){
                 cout << 1 << endl;
             }
             else{
