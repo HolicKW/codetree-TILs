@@ -24,7 +24,7 @@ int main() {
         cin >> cus[i];
     }
     cin >> team1 >> team2;
-    int cnt = 0;
+    long long cnt = 0;
     for(int i = 0; i<n;i++){
         cnt += (1+check(i));
     }
