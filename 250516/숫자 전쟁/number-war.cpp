@@ -30,6 +30,11 @@ int main() {
             }
         }
     }
-    cout << dp[n][n] << endl;
+    int ans = 0;
+    for(int i = 0; i <= n; i++) {
+        ans = max(ans, dp[i][n]);
+        ans = max(ans, dp[n][i]);
+    }
+    cout << ans;
     return 0;
 }
