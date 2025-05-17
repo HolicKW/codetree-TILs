@@ -3,8 +3,8 @@
 #include <utility>
 #include <algorithm>
 using namespace std;
-vector<pair<int,int>> vec;
-int n;
+vector<pair<long long,long long>> vec;
+long long n;
 int main() {
     // Please write your code here.
     long long cnt = 0;
@@ -15,34 +15,32 @@ int main() {
         cnt +=x;
         vec.push_back({y,x});
     }
-
+    cnt /=2;
     sort(vec.begin(),vec.end());
-    long long ans = 10e9;
+    long long ans = 0;
     long long i = 0;
     long long j = vec.size()-1;
     long long sum_cnt = 0;
-    while(i<j){
+    while(cnt > sum_cnt){
         long long a = vec[i].first;
-        long long a_count = vec[i].second;
         long long b = vec[j].first;
-        long long b_count = vec[j].second;
-        int num = min(a_count,b_count);
+        long long num = min(vec[i].second,vec[j].second);
+        if(i == j){
+            num = num/2;
+        }
         sum_cnt += num;
-        ans = min(ans,a+b);
-        a_count -= num;
-        b_count -= num;
-        if(a_count == 0){
+        ans = max(ans,a+b);
+        vec[i].second -= num;
+        vec[j].second -= num;
+        if(vec[i].second <= 0){
             i++;
-            vec[j].second = b_count;
         }
-        if(b_count == 0){
+        if(vec[j].second <= 0){
             j--;
-            vec[i].second = a_count;
         }
-
 
     }
-
+    
     cout << ans;
     return 0;
 }
