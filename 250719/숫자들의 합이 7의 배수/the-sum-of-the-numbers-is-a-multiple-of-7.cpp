@@ -4,7 +4,7 @@ using namespace std;
 
 int n;
 int numbers[50001];
-int prefix[50001];
+long long prefix[50001];
 
 
 int main() {
